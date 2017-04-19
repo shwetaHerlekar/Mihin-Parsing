@@ -37,7 +37,7 @@ public class Demo{
          		String BUCKET_NAME = "mihin-data";
          		String objectFileName = "Patient_entry.txt";
          		Storage.Objects.Get obj = storage.objects().get(BUCKET_NAME, objectFileName);
-         		HttpResponse response = obj.executeMedia();
+         		HttpResponse response = obj.execute();
 			String file=response.parseAsString();
 			//System.out.println(file);
 			 //JSON Parsing of data
