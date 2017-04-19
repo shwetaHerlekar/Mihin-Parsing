@@ -2,12 +2,10 @@ package com.example;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.GenericUrl;
-import com.google.api.client.http.HttpResponse;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.util.Preconditions;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.services.storage.Storage;
-import com.google.api.client.json.jackson2.JacksonFactory;
 import java.util.Collections;
 
 import org.json.simple.JSONArray;
