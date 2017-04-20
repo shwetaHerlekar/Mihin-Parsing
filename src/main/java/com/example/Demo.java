@@ -3,8 +3,10 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.GenericUrl;
 import com.google.api.client.http.HttpTransport;
+import com.google.api.client.http.HttpResponse;
 import com.google.api.client.util.Preconditions;
 import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.storage.Storage;
 import java.util.Collections;
 
@@ -35,7 +37,7 @@ public class Demo{
          		String BUCKET_NAME = "mihin-data";
          		String objectFileName = "Patient_entry.txt";
          		Storage.Objects.Get obj = storage.objects().get(BUCKET_NAME, objectFileName);
-         		HttpResponse response = obj.execute();
+         		HttpResponse response = obj.executeMedia();
 			String file=response.parseAsString();
 			//System.out.println(file);
 			 //JSON Parsing of data
